@@ -1,0 +1,17 @@
+ public static int maxXor(int lo, int hi, int k) {
+       ArrayList<Integer> list = new ArrayList<Integer>();
+        for (int i = lo; i <= hi; i++){
+           list.add(i);
+        }
+        List<Integer> numbers = new ArrayList<Integer>();
+        int xor = 0;
+        for( int num : list ){
+            xor = num ^num+1;
+            numbers.add(xor);
+        }
+        return Collections.max(numbers);    
+        
+       
+    }
+
+}
